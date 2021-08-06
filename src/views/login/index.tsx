@@ -1,25 +1,27 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-06-25 19:31:48
+ * @LastEditTime: 2021-08-06 19:16:59
  * @LastEditors: D.Y
- * @FilePath: /pherusa/src/views/login/index.tsx
+ * @FilePath: /pherusa-vite/src/views/login/index.tsx
  * @Description:
  */
 import React, { Component } from 'react'
-import { Form, Input, Button } from 'antd'
-import type { ILoginEntity } from '@interfaces/index'
-import i18n from 'i18next'
-import { connect } from 'react-redux'
-import { Trans } from 'react-i18next'
-import { Link } from 'react-router-dom'
 
-import { isPhoneNumber } from 'pherusa-pro'
+
 import { signIn } from '@apis/users'
 import { addToken } from '@stores/app/app.actions'
 import { setToken } from '@utils/index'
+import { Form, Input, Button } from 'antd'
+import i18n from 'i18next'
+import { isPhoneNumber } from 'pherusa-pro'
+import { Trans } from 'react-i18next'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import styles from './index.module.less'
+
+import type { ILoginEntity } from '@interfaces/index'
 
 type ILoginProps = {
   history: any

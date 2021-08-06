@@ -4,15 +4,21 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint src --fix --ext .ts,.tsx ",
+    "style": "stylelint --fix \"src/**/*.less\" --syntax less"
   },
   "dependencies": {
     "pherusa-pro": "2.0.10"
   },
   "devDependencies": {
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@umijs/fabric": "2.6.2",
     "@vitejs/plugin-react-refresh": "^1.3.1",
+    "husky": "7.0.1",
     "less": "^4.1.1",
     "path": "^0.12.7",
     "tslib": "^2.3.0",
@@ -20,5 +26,11 @@
     "vite": "^2.4.4",
     "vite-plugin-html-config": "^1.0.5",
     "vite-plugin-style-import": "^1.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run style",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }  
   }
 }
