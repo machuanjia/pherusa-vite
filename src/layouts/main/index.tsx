@@ -1,22 +1,22 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-08-06 16:03:49
- * @LastEditors: D.Y
+ * @LastEditTime: 2021-09-30 11:34:53
+ * @LastEditors: Please set LastEditors
  * @FilePath: /pherusa-vite/src/layouts/main/index.tsx
  * @Description:
  */
 import React, { Component } from 'react'
-import { RouteViewer, GlobalLoading } from 'pherusa-pro'
-import store from '@stores/store'
+
 import { generateRoutes } from '@components/RenderRoute';
+import store from '@stores/store'
+import { RouteViewer, GlobalLoading } from 'pherusa-pro'
 
-import NavComponent from '../nav'
-import PreferenceComponent from '../preference'
-import NavbarComponent from '../navbar'
-import { setInfo } from '../../permission'
 import logoPath from '../../assets/logo.png'
-
+import { setInfo } from '../../permission'
+import NavComponent from '../nav'
+import NavbarComponent from '../navbar'
+import PreferenceComponent from '../preference'
 import styles from './index.module.less'
 
 type IMainLayoutProps = {
@@ -67,7 +67,7 @@ export default class MainLayout extends Component<IMainLayoutProps, IMainLayoutS
               <div className={styles['main-layout-side']}>
                 <img className="logo" alt="logo" src={logoPath} width="40" />
                 <div className="navs">
-                  <NavComponent history={history} />
+                  <NavComponent history={history}/>
                 </div>
                 <PreferenceComponent />
               </div>

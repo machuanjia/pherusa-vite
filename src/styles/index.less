@@ -4,3 +4,20 @@
 @import './icon.less';
 @import './background.less';
 @import './border.less';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --color-primary: #f00; //theme('colors.blue.600');
+  }
+
+  .theme-light {
+    --color-primary: #f0f; //theme('colors.blue.400');
+  }
+
+  .theme-dark {
+    --color-primary: #00f; //theme('colors.blue.900');
+  }
+}
