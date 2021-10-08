@@ -1,16 +1,14 @@
 /*
  * @Author: D.Y
  * @Date: 2021-04-21 17:38:42
- * @LastEditTime: 2021-08-06 15:18:47
- * @LastEditors: D.Y
+ * @LastEditTime: 2021-10-08 17:48:22
+ * @LastEditors: Please set LastEditors
  * @FilePath: /pherusa-vite/src/permission.ts
  * @Description: 
  */
-import { find, uniqBy } from 'lodash'
 
-import routes, { asyncRouters, ROUTE_APP_KEY } from '@routes/index'
-import store from '@stores/store'
 import { getUserInfo } from '@apis/users'
+import routes, { asyncRouters, ROUTE_APP_KEY } from '@routes/index'
 import {
   SET_PERMISSIONS,
   SET_ROLES,
@@ -18,6 +16,8 @@ import {
   SET_USET_ID,
   SET_FLATTEN_ROUTERS,
 } from '@stores/app/app.types'
+import store from '@stores/store'
+import { find, uniqBy } from 'lodash'
 import { setPermissions, filterAsyncRoutes, filterFlattenRoutes } from 'pherusa-pro'
 
 export const getAuthRoutes = () => {

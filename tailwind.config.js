@@ -1,11 +1,7 @@
-/*
- * @Author: D.Y.M
- * @Date: 2021-09-29 15:01:12
- * @LastEditTime: 2021-09-30 11:33:43
- * @FilePath: /pherusa-vite/tailwind.config.js
- * @Description: 
- */
-const colors = require('tailwindcss/colors')
+
+
+// const colors = require('tailwindcss/colors')
+const colors = require('./colors')
 
 module.exports = {
   purge: [
@@ -17,19 +13,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // amber: colors.amber,
-        // lime: colors.lime,
-        // rose: colors.rose,
-        // orange: colors.orange,
-        primary: 'var(--color-primary)'
+        gray:colors.gray,
+        blue:colors.blue,
+        blueGray:colors.blueGray,
+        green:colors.green,
+        yellow:colors.yellow,
+        orange: colors.orange,
+        red: colors.red
       },
     },
-    // backgroundColor: {
-    //   primary: 'var(--color-primary)',
-    // },
-    // textColor: {
-    //   primary: 'var(--color-primary)',
-    // },
+    backgroundColor: {
+      white: 'var(--color-bg-white)',
+      main: 'var(--color-bg-main)',
+      input: 'var(--color-bg-input)',
+      disable: 'var(--color-bg-disable)',
+    },
+    textColor: {
+      white: 'var(--color-text-white)',
+      main: 'var(--color-text-main)',
+      primary: 'var(--color-text-primary)',
+      secondary: 'var(--color-text-secondary)',
+      placeholder: 'var(--color-text-placeholder)',
+      icon: 'var(--color-icon)',
+    },
+    borderColor:{
+      divider:'var(--color-divider)'
+    }
   },
   variants: {
     extend: {},

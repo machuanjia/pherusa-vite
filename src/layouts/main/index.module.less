@@ -1,32 +1,21 @@
-@import '@styles/variables.less';
-
-.main-layout{
-    display: flex;
-    height: 100vh;
-    &-side{
-        display: flex;
-        flex-direction: column;
-        width: 60px;
-        text-align: center;
-        border-right: 1px @border solid;
-        :global{
-            .logo{
-                margin: 12px auto;
-            }
-            .navs{
-                flex:1;
-            }
-        }
+.main-layout {
+  height: 100vh;
+  @apply flex flex-row;
+  &-side {
+    @apply flex flex-col w-16 text-center border-r border-divider border-solid;
+    :global {
+      .logo {
+        @apply mb-4 mt-4 ml-auto mr-auto;
+      }
+      .navs {
+        @apply flex-grow;
+      }
     }
-    &-main{
-        display: flex;
-        flex:1;
-        flex-direction: column;
-        &-container{
-            flex:1;
-            padding: 30px;
-            overflow: auto;
-            background: @bg-main;
-        }
+  }
+  &-main {
+    @apply flex flex-col flex-grow;
+    &-container {
+      @apply p-8 flex-grow bg-main overflow-auto;
     }
+  }
 }

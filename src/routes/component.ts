@@ -1,14 +1,13 @@
 /*
- * @Author: D.Y
- * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-04-26 17:31:33
- * @LastEditors: D.Y
- * @FilePath: /pherusa/src/routes/component.ts
- * @Description:
+ * @Author: D.Y.M
+ * @Date: 2021-08-06 15:16:39
+ * @LastEditTime: 2021-10-08 16:55:15
+ * @FilePath: /pherusa-vite/src/routes/component.ts
+ * @Description: 
  */
-import { asyncComponent } from 'pherusa-pro'
 import RouteLayout from '@layouts/route-layout'
 import i18n from 'i18next'
+import { asyncComponent } from 'pherusa-pro'
 
 const tableView = asyncComponent(() => import('@views/comps/table/index'))
 

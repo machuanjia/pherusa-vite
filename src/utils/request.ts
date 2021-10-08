@@ -1,15 +1,15 @@
 /*
  * @Author: D.Y
  * @Date: 2021-08-06 15:17:18
- * @LastEditTime: 2021-08-06 18:46:11
- * @LastEditors: D.Y
+ * @LastEditTime: 2021-10-08 17:53:25
+ * @LastEditors: Please set LastEditors
  * @FilePath: /pherusa-vite/src/utils/request.ts
  * @Description: 
  */
-import { message } from 'antd'
 import { logout } from '@utils/index'
-import { getRequest } from 'pherusa-pro'
 import { getToken } from '@utils/index'
+import { message } from 'antd'
+import { getRequest } from 'pherusa-pro'
 
 export default getRequest({
   // @ts-ignore

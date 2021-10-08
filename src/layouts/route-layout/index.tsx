@@ -1,14 +1,16 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 18:55:58
- * @LastEditTime: 2021-08-06 16:05:22
- * @LastEditors: D.Y
+ * @LastEditTime: 2021-10-08 17:52:55
+ * @LastEditors: Please set LastEditors
  * @FilePath: /pherusa-vite/src/layouts/route-layout/index.tsx
  * @Description: 
  */
 import React, { Component } from 'react';
-import { RouteViewer } from 'pherusa-pro';
+
 import { generateRoutes } from '@components/RenderRoute';
+import { RouteViewer } from 'pherusa-pro';
+
 type IRouterProps = {
   route: any;
 };

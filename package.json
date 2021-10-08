@@ -2,18 +2,19 @@
   "name": "pherusa-vite",
   "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview",
+    "dev": "vite",
     "lint": "eslint src --fix --ext .ts,.tsx ",
+    "serve": "vite preview",
     "style": "stylelint --fix \"src/**/*.less\" --syntax less"
   },
-  "dependencies": {
-    "autoprefixer": "^10.3.6",
-    "pherusa-pro": "2.0.10",
-    "postcss": "^8.3.8",
-    "tailwindcss": "^2.2.16"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run style",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
@@ -21,19 +22,18 @@
     "@types/react-dom": "^17.0.0",
     "@umijs/fabric": "2.6.2",
     "@vitejs/plugin-react-refresh": "^1.3.1",
+    "autoprefixer": "^10.3.6",
     "husky": "7.0.1",
     "less": "^4.1.1",
     "path": "^0.12.7",
+    "pherusa-pro": "2.0.10",
+    "postcss": "^8.3.8",
+    "postcss-custom-properties": "^12.0.0",
+    "tailwindcss": "^2.2.16",
     "tslib": "^2.3.0",
     "typescript": "^4.3.2",
     "vite": "^2.4.4",
     "vite-plugin-html-config": "^1.0.5",
     "vite-plugin-style-import": "^1.1.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run style",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }

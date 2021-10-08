@@ -29,19 +29,17 @@
 .login-form-wrap {
   width: 420px;
   .login-form-header {
-    text-align: center;
+    @apply text-center;
     .login-form-title {
-      color: @color-primary;
-      font-weight: 500;
-      font-size: 2rem;
+      @apply text-primary text-3xl font-medium;
     }
     .login-form-desc {
-      margin-bottom: 48px;
       color: @text-desc;
       font-size: 0.875rem;
+      @apply mb-6 text-secondary text-sm;
     }
   }
   .login-form-footer {
-    text-align: center;
+    @apply text-center;
   }
 }

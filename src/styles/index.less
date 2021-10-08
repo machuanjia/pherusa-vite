@@ -1,23 +1,49 @@
-@import './global.less';
 @import './antd-reset.less';
-@import './text.less';
-@import './icon.less';
-@import './background.less';
-@import './border.less';
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+// theme('colors.blue.600');
 @layer base {
   :root {
-    --color-primary: #f00; //theme('colors.blue.600');
+    --color-primary: theme('colors.blue.900'); //住色
+    --color-brand: theme('colors.yellow.900'); //品牌色
+    --color-success: theme('colors.green.900'); //成功
+    --color-error: theme('colors.red.900'); //失败
+    --color-warning: theme('colors.orange.900'); //警告
+    --color-bg-white: theme('colors.white'); //白色背景
+    --color-bg-main: theme('colors.gray.200'); // 主背景色
+    --color-bg-input: theme('colors.gray.300'); // 输入框背景
+    --color-bg-disable: theme('colors.gray.400'); //禁用背景
+    --color-text-white: theme('colors.white'); // 白色字体
+    --color-text-main: theme('colors.gray.900'); // 主要字体色
+    --color-text-primary: theme('colors.blueGray.900'); //主要标题
+    --color-text-secondary: theme('colors.blueGray.800'); //次要标题
+    --color-text-placeholder: theme('colors.blueGray.600'); //placeholder 文本
+    --color-icon: theme('colors.blueGray.700'); //icon颜色
+    --color-divider: theme('colors.blueGray.400'); // 边框
   }
 
   .theme-light {
-    --color-primary: #f0f; //theme('colors.blue.400');
+    // --color-primary: theme('colors.blue.900'); //住色
+    // --color-brand: theme('colors.yellow.900'); //品牌色
+    // --color-success: theme('colors.green.900'); //成功
+    // --color-error: theme('colors.red.900'); //失败
+    // --color-warning: theme('colors.orange.900'); //警告
+    // --color-bg-white: theme('colors.white'); //白色背景
+    // --color-bg-main: theme('colors.gray.200'); // 主背景色
+    // --color-bg-input: theme('colors.gray.300'); // 输入框背景
+    // --color-bg-disable: theme('colors.gray.400'); //禁用背景
+    // --color-text-white: theme('colors.white'); // 白色字体
+    // --color-text-main: theme('colors.gray.900'); // 主要字体色
+    // --color-text-primary: theme('colors.blueGray.900'); //主要标题
+    // --color-text-secondary: theme('colors.blueGray.800'); //次要标题
+    // --color-text-placeholder: theme('colors.blueGray.600'); //placeholder 文本
+    // --color-icon: theme('colors.blueGray.700'); //icon颜色
+    // --color-divider: theme('colors.blueGray.400'); // 边框
   }
 
-  .theme-dark {
-    --color-primary: #00f; //theme('colors.blue.900');
-  }
+  // .theme-dark {
+  //   --color-primary: #00f;
+  // }
 }

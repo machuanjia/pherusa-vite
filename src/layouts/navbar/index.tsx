@@ -1,17 +1,17 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-04-22 18:59:20
- * @LastEditors: D.Y
- * @FilePath: /pherusa/src/layouts/navbar/index.tsx
+ * @LastEditTime: 2021-10-08 17:52:22
+ * @LastEditors: Please set LastEditors
+ * @FilePath: /pherusa-vite/src/layouts/navbar/index.tsx
  * @Description: 
  */
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import i18n from 'i18next';
-import { find } from 'lodash';
 
 import store from '@stores/store';
+import i18n from 'i18next';
+import { find } from 'lodash';
+import { withRouter } from 'react-router-dom';
 
 import styles from './index.module.less';
 
@@ -38,7 +38,7 @@ class NavbarComponent extends Component<INavbarProps, INavbarState> {
       <div className={styles['nav-bar-wrap']}>
         <div className={styles['nav-bar-title']}>
           {icon}
-          <span className="m-l-12">{title}</span>
+          <span className="ml-3">{title}</span>
         </div>
       </div>
     );

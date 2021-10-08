@@ -1,12 +1,13 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-04-22 14:46:53
- * @LastEditors: D.Y
- * @FilePath: /pherusa/src/views/comps/table/TableCollection.tsx
+ * @LastEditTime: 2021-10-08 17:43:11
+ * @LastEditors: Please set LastEditors
+ * @FilePath: /pherusa-vite/src/views/comps/table/TableCollection.tsx
  * @Description: 
  */
 import React, { Component } from 'react';
+
 import { Form, Input, Button } from 'antd';
 import i18n from 'i18next';
 import { isPhoneNumber } from 'pherusa-pro';

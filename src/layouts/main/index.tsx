@@ -1,7 +1,7 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-09-30 11:34:53
+ * @LastEditTime: 2021-10-08 17:50:43
  * @LastEditors: Please set LastEditors
  * @FilePath: /pherusa-vite/src/layouts/main/index.tsx
  * @Description:
@@ -76,7 +76,6 @@ export default class MainLayout extends Component<IMainLayoutProps, IMainLayoutS
             <div className={styles['main-layout-main']}>
               <NavbarComponent />
               <div className={styles['main-layout-main-container']}>
-                {/* <RouteViewer routers={route.children} /> */}
                 {
                   generateRoutes(route.children)
                 }

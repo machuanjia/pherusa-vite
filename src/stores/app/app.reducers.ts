@@ -1,14 +1,16 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-04-28 13:38:48
- * @LastEditors: D.Y
- * @FilePath: /pherusa/src/stores/app/app.reducers.ts
+ * @LastEditTime: 2021-10-08 17:16:33
+ * @LastEditors: Please set LastEditors
+ * @FilePath: /pherusa-vite/src/stores/app/app.reducers.ts
  * @Description:
  */
-import * as actionTypes from './app.types'
-import type { AppState, AppAction } from '@interfaces/index'
 import routes from '@routes/index'
+
+import * as actionTypes from './app.types'
+
+import type { AppState, AppAction } from '@interfaces/index'
 
 const initialState: AppState = {
   token: '',

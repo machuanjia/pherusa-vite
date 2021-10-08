@@ -1,14 +1,10 @@
-/*
- * @Author: xulijing
- * @Date: 2021-02-24 16:42:55
- * @LastEditTime: 2021-06-25 19:30:06
- * @FilePath: /pherusa/src/routes/index.ts
- */
-import { asyncComponent } from 'pherusa-pro'
+
 import MainLayout from '@layouts/main'
-import componentsRoute from './component'
-import { NoFond } from 'pherusa-pro'
 import i18n from 'i18next'
+import { asyncComponent } from 'pherusa-pro'
+import { NoFond } from 'pherusa-pro'
+
+import componentsRoute from './component'
 
 export const ROUTE_APP_KEY = 'app'
 

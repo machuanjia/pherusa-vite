@@ -1,18 +1,19 @@
 /*
  * @Author: D.Y
  * @Date: 2021-02-04 15:27:20
- * @LastEditTime: 2021-06-16 10:46:24
- * @LastEditors: D.Y
- * @FilePath: /pherusa/src/layouts/nav/index.tsx
+ * @LastEditTime: 2021-10-08 17:15:52
+ * @LastEditors: Please set LastEditors
+ * @FilePath: /pherusa-vite/src/layouts/nav/index.tsx
  * @Description:
  */
 import React, { Component } from 'react'
+
+import { ROUTE_APP_KEY } from '@routes/index'
+import store from '@stores/store'
 import { Menu } from 'antd'
-import { Link } from 'react-router-dom'
 import { find } from 'lodash'
 import { Icon } from 'pherusa-pro'
-import store from '@stores/store'
-import { ROUTE_APP_KEY } from '@routes/index'
+import { Link } from 'react-router-dom'
 
 type IRoute = {
   path: string

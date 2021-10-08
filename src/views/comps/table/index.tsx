@@ -1,12 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Table, Input, Button, Tooltip, Modal } from 'antd';
 
-import { ContentLayoutComponent } from 'pherusa-pro';
-import { MODAL_SIZE } from 'pherusa-pro';
-import TableCollecrtionComponent from './TableCollection';
-import { listMixin } from 'pherusa-pro';
-import { getUsers, getUserDetail, updateUser, deleteUser } from '@apis/index';
-import type { IListMixin } from '@interfaces/mixin';
 import {
   SettingOutlined,
   EditOutlined,
@@ -14,13 +7,22 @@ import {
   SearchOutlined,
   PlusOutlined,
 } from '@ant-design/icons';
+import { getUsers, getUserDetail, updateUser, deleteUser } from '@apis/index';
+import { Table, Input, Button, Tooltip, Modal } from 'antd';
 import i18n from 'i18next';
+import { ContentLayoutComponent } from 'pherusa-pro';
+import { MODAL_SIZE } from 'pherusa-pro';
+import { listMixin } from 'pherusa-pro';
+
+import TableCollecrtionComponent from './TableCollection';
+
+import type { IListMixin } from '@interfaces/mixin';
+
 
 type ITableState = unknown;
 
 class TableView extends Component<IListMixin, ITableState> {
   init() {
-    // console.log(this.props)
     return {
       fetchAction: getUsers,
       getDetailAction: getUserDetail,
@@ -61,16 +63,16 @@ class TableView extends Component<IListMixin, ITableState> {
         key: 'action',
         width: 200,
         render: (text, record) => (
-          <span>
-            <span className="m-l-12 m-r-12 icon-action">
-              <SettingOutlined /> {i18n.t('action.setting')}
+          <span className="flex items-center">
+            <span className="ml-3 mr-3 flex items-center ">
+              <SettingOutlined className="mr-1"/> {i18n.t('action.setting')}
             </span>
-            <span className="m-l-12 m-r-12 icon-action">
+            <span className="ml-3 mr-3 flex items-center">
               <Tooltip placement="top" title={i18n.t('action.edit')}>
                 <EditOutlined onClick={this.editAction.bind(this, record)} />
               </Tooltip>
             </span>
-            <span className="m-l-12 m-r-12 icon-action">
+            <span className="ml-3 mr-3 flex items-center">
               <Tooltip placement="top" title={i18n.t('action.delete')}>
                 <DeleteOutlined onClick={this.deleteAction.bind(this, record)} />
               </Tooltip>
@@ -114,10 +116,10 @@ class TableView extends Component<IListMixin, ITableState> {
         <Fragment key="actions">
           <Button
             type="primary"
-            icon={<PlusOutlined />}
-            className={`${'action-btn'}`}
+            className={`${'action-btn'} flex items-center`}
             onClick={openCollection}
           >
+            <PlusOutlined />
             {i18n.t('action.create')}
           </Button>
         </Fragment>

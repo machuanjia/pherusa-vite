@@ -1,17 +1,20 @@
-import { Avatar, Drawer, Menu, Modal, Popover, Radio } from 'antd';
 import React, { Component } from 'react';
-import i18n from 'i18next';
-import { SketchPicker } from 'react-color';
-import { DRAWER_SIZE, MODAL_SIZE } from 'pherusa-pro';
-import { logout } from '@utils/index';
+
 import {
   QuestionCircleOutlined,
   SettingOutlined,
   LogoutOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import styles from './index.module.less';
 import { getLanguage } from '@i18n/index';
+import { logout } from '@utils/index';
+import { Avatar, Drawer, Menu, Modal, Popover, Radio } from 'antd';
+import i18n from 'i18next';
+import { DRAWER_SIZE, MODAL_SIZE } from 'pherusa-pro';
+import { SketchPicker } from 'react-color';
+
+import styles from './index.module.less';
+
 
 type IPreferenceProps = Record<string, unknown>;
 
@@ -84,7 +87,7 @@ export default class PreferenceComponent extends Component<IPreferenceProps, IPr
           <Avatar
             size={36}
             style={{ backgroundColor: '#2249c0' }}
-            className="pointer"
+            className="pointer flex flex-col justify-center"
             icon={<UserOutlined />}
           />
         </Popover>
@@ -147,7 +150,7 @@ export default class PreferenceComponent extends Component<IPreferenceProps, IPr
               <Radio.Button value="small">{i18n.t('preference.small')}</Radio.Button>
             </Radio.Group>
           </div>
-          <div className="text-dark m-b-8">{i18n.t('preference.theme')}</div>
+          {/* <div className="text-dark m-b-8">{i18n.t('preference.theme')}</div>
           <div className="m-b-24">
             <Popover
               overlayClassName="preference-pop-wrap"
@@ -158,7 +161,7 @@ export default class PreferenceComponent extends Component<IPreferenceProps, IPr
             >
               <div className="preference-theme-block"></div>
             </Popover>
-          </div>
+          </div> */}
         </Drawer>
       </div>
     );

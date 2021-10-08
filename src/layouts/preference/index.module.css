@@ -1,0 +1,9 @@
+.preference-wrap {
+  @apply pt-4 pb-4 flex justify-center;
+}
+:global .preference-pop-wrap .ant-popover-inner-content {
+  padding: 0 !important;
+}
+.prefernce-menu {
+  border-right: none;
+}

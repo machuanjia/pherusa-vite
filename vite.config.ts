@@ -1,8 +1,8 @@
 /*
  * @Author: D.Y
  * @Date: 2021-08-06 11:18:46
- * @LastEditTime: 2021-08-06 18:44:40
- * @LastEditors: D.Y
+ * @LastEditTime: 2021-10-08 19:01:25
+ * @LastEditors: Please set LastEditors
  * @FilePath: /pherusa-vite/vite.config.ts
  * @Description: 
  */
@@ -13,50 +13,36 @@ import { resolve } from 'path'
 import htmlPlugin from 'vite-plugin-html-config'
 const config = require('./server/config').config;
 
+// @primary-color: #1890ff; // 全局主色
+// @link-color: #1890ff; // 链接色
+// @success-color: #52c41a; // 成功色
+// @warning-color: #faad14; // 警告色
+// @error-color: #f5222d; // 错误色
+// @font-size-base: 14px; // 主字号
+// @heading-color: rgba(0, 0, 0, 0.85); // 标题色
+// @text-color: rgba(0, 0, 0, 0.65); // 主文本色
+// @text-color-secondary: rgba(0, 0, 0, 0.45); // 次文本色
+// @disabled-color: rgba(0, 0, 0, 0.25); // 失效色
+// @border-radius-base: 2px; // 组件/浮层圆角
+// @border-color-base: #d9d9d9; // 边框色
+// @box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+//   0 9px 28px 8px rgba(0, 0, 0, 0.05); // 浮层阴影
+
 const modifyVars = {
-  '@laiye-primary-color': '#2249c0',
-  '@laiye-link-color': '#2249c0',
-  '@color-primary': '#2249c0',
-  '@color-blue': '#79adf8',
-  '@color-black': '#000',
-  '@border-gray': '#d9dee2',
-  '@color-blue-dark': '#3f5361',
-  '@color-blue-normal': '#677a8e',
-  '@color-blue-light': '#8e9ca8',
-  '@color-light': '#f5f7f7',
-  '@color-danger': '#ff3e27',
-  '@color-warning': '#feb312',
-  '@color-success': '#37b184',
-  '@color-white': '#fff',
-  '@color-gray': '#666666',
-  '@color-light-gray': '#f0f2f5',
-  '@color-label-gray': '#425b6d',
-  '@color-normal-gray': '#687c8a',
-
-  // 功能划分
-  '@border': '@color-light',
-
-  '@icon': '@color-blue-light',
-  '@icon-white': '@color-white',
-  '@icon-dark': '@color-blue-dark',
-  '@icon-primary': '@color-primary',
-
-  '@text-white': '@color-white',
-  '@text-black': '@color-black',
-  '@text-primary': '@color-primary',
-  '@text-danger': '@color-danger',
-  '@text-success': '@color-success',
-  '@text-warning': '@color-warning',
-  '@text-desc': '@color-blue-normal',
-  '@text-empty': '@color-blue-light',
-  '@text-dark': '@color-blue-dark',
-
-  '@bg-primary': '@color-blue',
-  '@bg-warning': '@color-warning',
-  '@bg-main': '@color-light-gray',
-  '@bg-white': '@color-white',
-  '@table-shadow': '0 2px 8px 0 rgba(0, 0, 0, .1)',
-  '@shadow-gray': '#b3bdc5',
+  // '@laiye-primary-color': '#2249c0',
+  // '@laiye-link-color': '#2249c0',
+  // antd
+  '@primary-color':'#2249c0',
+  '@link-color':'#2249c0',
+  '@success-color':'#37b184',
+  '@warning-color':'#ffb413',
+  '@error-color':'#ff3e27',
+  '@heading-color':'#000',
+  '@text-color':'#425b6d',
+  '@text-color-secondary':'#687c8a',
+  '@disabled-color':'#ccc',
+  '@border-radius-base':'4px',
+  '@border-color-base':'#eceef0'
 }
 
 // https://vitejs.dev/config/
